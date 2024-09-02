@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice_Cream</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+        background-color: #f3dbcf;
+      }
+      .header {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 32px;
+        background-color: #79616f;
+        color: #f3dbcf;
+        border-bottom: 4px solid #fff;
+        background: linear-gradient(
+          hsla(325, 11%, 43%, 1),
+        );
+        box-shadow: 0 0 20px 0;
+      }
+      h1:hover {
+        color: white;
+      }
+      h2 {
+        text-align: center;
+        color: #79616f;
+      }
+      p {
+        text-align: center;
+        color: #79616f;
+      }
+      img:hover {
+        background-color: white;
+      }
+      .gallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 10px;
+      }
+
+      .gallery img {
+        width: 100%;
+        max-width: 350px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      .gallery::after {
+        content: "";
+        width: 350px;
+      }
+      .about {
+        display: flexbox;
+        justify-content: space-around;
+      }
+      hr {
+        height: 2px;
+        background-color: brown;
+        border-color: brown;
+      }
+      button {
+        border-radius: 25px;
+        display: block;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #f3dbcf;
+        color: #79616f;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        text-decoration: none;
+        transition: all 200ms ease;
+      }
+      button:hover {
+        color: #fff;
+        background-color: #79616f;
+        border: 1px solid #fff;
+      }
+      footer {
+        text-align: center;
+        font-size: 14px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Desserts</h1>
+    </header>
+    <div class="gallery">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/707/original/StockCake-Delicious_Ice_Cream_1725214471.jpg?1725220086"
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/789/original/StockCake-Strawberry_Cheesecake_Slice_1725260638.jpg?1725262984"
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/788/original/StockCake-Delectable_Berry_Desserts_1725260936.jpg?1725262965"
+      />
+    </div>
+    <p><em>I love it more on a Summer Day at the beach.</em></p>
+    <h2>It makes me Happy!</h2>
+    <hr />
+    <div class="about">
+      <p>
+        <strong>Ice cream</strong> is a frozen dessert typically made from milk
+        or cream that has been flavoured with a sweetener, either sugar or an
+        alternative, and a spice, such as cocoa or vanilla, or with fruit, such
+        as strawberries or peaches. Food colouring is sometimes added in
+        addition to stabilizers. The mixture is cooled below the freezing point
+        of water and stirred to incorporate air spaces and prevent detectable
+        ice crystals from forming. It can also be made by whisking a flavoured
+        cream base and liquid nitrogen together. The result is a smooth,
+        semi-solid foam that is solid at very low temperatures (below 2 °C or 35
+        °F). It becomes more malleable as its temperature increases.
+        <br /><br />
+        Ice cream may be served in dishes, eaten with a spoon, or licked from
+        edible wafer ice cream cones held by the hands as finger food. Ice cream
+        may be served with other desserts—such as cake or pie—or used as an
+        ingredient in cold dishes—like ice cream floats, sundaes, milkshakes,
+        and ice cream cakes—or in baked items such as Baked Alaska. <br /><br />
+        Italian ice cream is gelato. Frozen custard is a type of rich ice cream.
+        Soft serve is softer and is often served at amusement parks and
+        fast-food restaurants in the United States. Ice creams made from cow's
+        milk alternatives, such as goat's or sheep's milk, or milk substitutes
+        (e.g., soy, cashew, coconut, almond milk, or tofu), are available for
+        those who are lactose intolerant, allergic to dairy protein, or vegan.
+        Banana "nice cream"[a] is a 100% fruit-based vegan alternative. Frozen
+        yoghurt, or "froyo", is similar to ice cream but uses yoghurt and can be
+        lower in fat. Fruity sorbets or sherbets are not ice creams but are
+        often available in ice cream shops. <br /><br />
+        The meaning of the name ice cream varies from one country to another. In
+        some countries, such as the United States, ice cream applies only to a
+        specific variety, and most governments regulate the commercial use of
+        the various terms according to the relative quantities of the main
+        ingredients, notably the amount of cream.[1] Products that do not meet
+        the criteria to be called ice cream are sometimes labelled "frozen dairy
+        dessert" instead.[2] In other countries, such as Italy and Argentina,
+        one word is used for all variants.
+      </p>
+    </div>
+    <button>More Info</button>
+    <footer>
+      <p>
+        <a href="https://www.freecodecamp.org" target="_blank"></a>
+      </p>
+      <p class="address">Coded by Reneilwe Ratlhagana</p>
+    </footer>
+  </body>
+  <script>
+    function moreInfo() {
+      let firstName = prompt("What is your name?");
+      let age = prompt("How old are you?");
+      if (age >= 18) {
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = "Hi, " + firstName + "! Welcome to SheCodes!";
+      } else {
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = "Sorry, " + firstName + "! You cannot join SheCodes!";
+      }
+    }
+    let moreInfoButton = document.querySelector("button");
+    moreInfoButton.addEventListener("click", moreInfo);
+  </script>
+</html>
