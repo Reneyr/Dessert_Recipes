@@ -1,4 +1,4 @@
-# ice_cream
+# Dessert_Recipes
 
 Instructions
 Create a landing page from scratch about something you’re passionate about. The page should include a user interaction.
