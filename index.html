@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ice_Cream</title>
+    <title>Dessert_Recipes</title>
     <style>
       * {
         box-sizing: border-box;
+        line-height: 1.2em;
       }
       body {
         margin: 0;
@@ -15,24 +16,27 @@
       }
       .header {
         text-align: center;
-        text-transform: uppercase;
+        text-transform: capitalize;
         padding: 32px;
         background-color: #79616f;
         color: #f3dbcf;
-        border-bottom: 4px solid #fff;
-        background: linear-gradient(hsla(325, 11%, 43%, 1));
+        border-bottom: 2px ridge #fff;
+        background: linear-gradient(hsla(325, 11%, 43%, 1), hsla(20, 60%, 88%, 1));
         box-shadow: 0 0 20px 0;
       }
       h1:hover {
         color: white;
       }
-      h2,h3,h4 {
-        text-align: center;
+     
+      h2,h3 {
         color: #79616f;
       }
-      p {
+      .subHeading{
         text-align: center;
+      }
+      p {
         color: #79616f;
+        line-height:1.2em;
       }
       
       img:hover {
@@ -64,8 +68,18 @@
         width: 350px;
       }
       .recipe {
-        justify-content: space-around;
+            display: flex;
+            flex-wrap: wrap;  
       }
+
+   .box {
+    flex-basis: 50%;
+    box-sizing: border-box;
+    padding: 30px; 
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+    }
       ul, li{
         text-align: left;
         color:#79616f
@@ -98,44 +112,55 @@
         font-size: 14px;
         margin: auto;
       }
+
+      a{
+        color: #79616f;
+        margin-top: 10px auto;
+      }
+    .address span {
+    font-style: italic;
+    font-weight: bold; 
+    }
     </style>
   </head>
   <body>
     <header class="header">
-      <h1>Desserts Recipes</h1>
+      <h1><span>Dessert</span> Recipes</h1>
     </header>
     <div class="gallery">
       <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/707/original/StockCake-Delicious_Ice_Cream_1725214471.jpg?1725220086"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/707/original/StockCake-Delicious_Ice_Cream_1725214471.jpg?1725220086" alt="Ice Cream Image"
       />
       <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/789/original/StockCake-Strawberry_Cheesecake_Slice_1725260638.jpg?1725262984"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/789/original/StockCake-Strawberry_Cheesecake_Slice_1725260638.jpg?1725262984" alt="Strawberry Cheesecake"
       />
       <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/846/original/StockCake-Decadent_Chocolate_Brownies_1725279367.jpg?1725279394"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/846/original/StockCake-Decadent_Chocolate_Brownies_1725279367.jpg?1725279394" alt="Brownies"
       />
     </div>
-    <p><em>I love desserts, especially home-made</em></p>
-    <h2>It makes me Happy!</h2>
+    <p class = "subHeading"><em>I love desserts, especially home-made</em></p>
+    <h2></h2>
     <hr />
+    <h2 class = "subHeading">Strawberry Cheesecake Recipe</h2>
+      <p class = "subHeading" > This <em>strawberry cheesecake</em> has a graham cracker crust and creamy filling with swirls of sweetened strawberry sauce. It's perfect for any special occasion!</p>
     <div class="recipe">
-      <h2>Strawberry Cheesecake Recipe</h2>
-      <p> This strawberry cheesecake has a graham cracker crust and creamy filling with swirls of sweetened strawberry sauce. It's perfect for any special occasion!</p>
-        <p>Prep Time:20 mins </p>
-      <p>Cook Time: 50 mins </p>
-      <p>Additional Time: 4 hrs 40 mins</p>
-      <p>Total Time: 5hrs 50 mins</p> 
-      <p>Servings: 12</p> 
-      <p>Yield: 1 (9-inch) cheesecake </p> 
+      
+      <div class = box>
+      <p><strong>Prep Time:</strong> 20 mins </p>
+      <p><strong>Cook Time:</strong> 50 mins </p>
+      <p><strong>Additional Time:</strong> 4 hrs 40 mins</p>
+      <p><strong>Total Time:</strong> 5hrs 50 mins</p> 
+      <p><strong>Servings:</strong> 12</p> 
+      <p><strong>Yield:</strong> 1 (9-inch) cheesecake </p> 
       <h3>Ingredients</h3> 
-      <p>Crust:</p>
+      <p><strong>Crust:</strong></p>
       <ul>
         <li>1 ¼ cups graham cracker crumbs </li>
         <li>⅓ cup butter melted</li>
         <li>¼ cup white sugar</li>
         <li>2 teaspoons ground cinnamon, or to taste </li>
       </ul>
-      <p>Filling:</p>
+      <p><strong>Filling:</strong></p>
           <ul>
             <li>2(10 ounce) packages frozen sweetened sliced strawberries, thawed and drained </li>
         <li>1 tablespoon
@@ -146,56 +171,47 @@
         <li>½ teaspoon vanilla extract</li>
       <li>3 large eggs</li>
     <li>1 tablespoon water (Optional)</li>
-  </ul>    
+  </ul> </div>
+  <div class = box>   
   <h3>Directions</h3> 
-  <h4>Step 1</h4>
-  <p>Gather all ingredients.</p>
-  <h4>Step 2</h4>
-  <p>To make the crust: Combine graham cracker crumbs, butter, sugar, and cinnamon in a bowl; mix well. Press onto the bottom of an ungreased 9-inch springform pan. Place in the refrigerator to chill for 30 minutes. Preheat the oven to 300 degrees F (150 degrees C).</p>
-  <h4>Step 3</h4>
-  <p>To make the filling: Place strawberries and cornstarch into a blender; cover and puree until smooth.</p>
-  <h4>Step 4</h4>
-  <p>Pour strawberry sauce into a saucepan and bring to a boil over high heat. Boil and stir until sauce is thick and shiny, about 2 minutes. Set aside 1/3 cup strawberry sauce; cool. Cover and refrigerate remaining sauce for serving.</p>
-  <h4>Step 5</h4>
-  <p>Beat cream cheese in a mixing bowl with an electric mixer until light and fluffy; gradually beat in condensed milk. Mix in lemon juice and vanilla extract, then beat in eggs on low speed until just combined.</p>
-  <h4>Step 6</h4>
-  <p>Pour 1/2 of the cream cheese mixture over crust; drop 1/2 of the reserved strawberry sauce by 1/2 teaspoonfuls on cream cheese layer.</p>
-  <h4>Step 7</h4>
-  <p>Carefully spoon remaining cream cheese mixture over sauce; drop remaining strawberry sauce by 1/2 teaspoonfuls on top.</p>
-  <h4>Step 8</h4>
-  <p>Cut through the top layer only with a knife to swirl strawberry sauce.</p>
-  <h4>Step 9</h4>
-  <p>Bake in the preheated oven until the center is almost set, 45 to 50 minutes.</p>
-  <h4>Step 10</h4>
-  <p>Cool on a wire rack for 10 minutes. Carefully run a knife around the edge of the pan to loosen; cool for 1 hour at room temperature. Refrigerate at least 4 hours to overnight before serving.</p>
-  <h4>Step 11</h4>
-  <p>Serve reserved strawberry sauce with cheesecake. If
+  <p><strong>Step 1: </strong>Gather all ingredients.</p>
+  <p> <strong>Step 2: </strong>To make the crust: Combine graham cracker crumbs, butter, sugar, and cinnamon in a bowl; mix well. Press onto the bottom of an ungreased 9-inch springform pan. Place in the refrigerator to chill for 30 minutes. Preheat the oven to 300 degrees F (150 degrees C).</p>
+  <p><strong>Step 3: </strong>To make the filling: Place strawberries and cornstarch into a blender; cover and puree until smooth.</p>
+  <p> <strong>Step 4: </strong>Pour strawberry sauce into a saucepan and bring to a boil over high heat. Boil and stir until sauce is thick and shiny, about 2 minutes. Set aside 1/3 cup strawberry sauce; cool. Cover and refrigerate remaining sauce for serving.</p>
+  <p> <strong>Step 5: </strong>Beat cream cheese in a mixing bowl with an electric mixer until light and fluffy; gradually beat in condensed milk. Mix in lemon juice and vanilla extract, then beat in eggs on low speed until just combined.</p>
+  <p><strong>Step 6: </strong>Pour 1/2 of the cream cheese mixture over crust; drop 1/2 of the reserved strawberry sauce by 1/2 teaspoonfuls on cream cheese layer.</p>
+  <p><strong>Step 7: </strong>Carefully spoon remaining cream cheese mixture over sauce; drop remaining strawberry sauce by 1/2 teaspoonfuls on top.</p>
+  <p> <strong>Step 8: </strong>Cut through the top layer only with a knife to swirl strawberry sauce.</p>
+  <p> <strong>Step 9: </strong>Bake in the preheated oven until the center is almost set, 45 to 50 minutes.</p>
+  <p><strong>Step 10: </strong>Cool on a wire rack for 10 minutes. Carefully run a knife around the edge of the pan to loosen; cool for 1 hour at room temperature. Refrigerate at least 4 hours to overnight before serving.</p>
+  <p><strong>Step 11: </strong>Serve reserved strawberry sauce with cheesecake. If
         sauce is too thick, stir in water.</p>
       </p>
-      <p>
-      </p>
+      </div>
+      </div>
     </div>
-    <button>More Info</button>
+    <hr />
+  
+    <button>More Recipes</button> <br />
     <footer>
-      <p>
-        <a href="https://www.freecodecamp.org" target="_blank"></a>
-      </p>
-      <p class="address">Coded by Reneilwe Ratlhagana</p>
+      <a href="https://www.upscalelivingmag.com/news/reasons-why-homemade-dessert-is-always-better/">Why home-made desserts</a>
+      <p class="address"> Coded by <span>Reneilwe Ratlhagana</span></p>
     </footer>
   </body>
   <script>
-    function moreInfo() {
+    function moreRecipes() {
       let firstName = prompt("What is your name?");
-      let age = prompt("How old are you?");
-      if (age >= 18) {
-        let h1 = document.querySelector("h1");
-        h1.innerHTML = "Hi, " + firstName + "! Welcome to SheCodes!";
+      alert("Welcome, "+ firstName)
+      let age = prompt("How old are you?")
+      let email = prompt("What is your email address?");
+      let detail = document.querySelector(".address");
+      if (age >= 16) {
+        detail.innerHTML = `Hi ${firstName}, you can work on your own!`;
       } else {
-        let h1 = document.querySelector("h1");
-        h1.innerHTML = "Sorry, " + firstName + "! You cannot join SheCodes!";
+        detail.innerHTML = `Hello ${firstName}, ask mom or dad to assist you.`;
       }
     }
-    let moreInfoButton = document.querySelector("button");
-    moreInfoButton.addEventListener("click", moreInfo);
+    let moreRecipesButton = document.querySelector("button");
+    moreRecipesButton.addEventListener("click", moreRecipes);
   </script>
 </html>
